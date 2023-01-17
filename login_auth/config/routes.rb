@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   root "application#home"
   resources :useraccount
+  resources :login
 end
