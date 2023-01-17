@@ -1,0 +1,127 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/login":
+    get:
+      summary: list logins
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create login
+      responses:
+        '200':
+          description: successful
+  "/login/new":
+    get:
+      summary: new login
+      responses:
+        '200':
+          description: successful
+  "/login/{id}/edit":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: edit login
+      responses:
+        '200':
+          description: successful
+  "/login/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show login
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update login
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update login
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete login
+      responses:
+        '200':
+          description: successful
+  "/useraccount":
+    get:
+      summary: list useraccounts
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create useraccount
+      responses:
+        '200':
+          description: successful
+  "/useraccount/new":
+    get:
+      summary: new useraccount
+      responses:
+        '200':
+          description: successful
+  "/useraccount/{id}/edit":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: edit useraccount
+      responses:
+        '200':
+          description: successful
+  "/useraccount/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show useraccount
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update useraccount
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update useraccount
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete useraccount
+      responses:
+        '200':
+          description: successful
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
