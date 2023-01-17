@@ -9,7 +9,11 @@ class LoginController < ApplicationController
         if user_val.nil? 
             render json: "Email is not registered. Please create new useraccount!" 
         else 
-            render json: "Valid email id. User exists already!" 
+            if (user_val.authenticate(params[:password]))
+              render json: "User exist! Login successfull!" 
+            else 
+                render json: "Wrong password!" 
+            end
         end
         
     end
